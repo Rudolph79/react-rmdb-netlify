@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledGrid, StyledGridContent } from "../styles/StyledGrid";
+import PropTypes from 'prop-types';
 
 const Grid = ({ header, children }) => (
     <div>
@@ -8,5 +9,9 @@ const Grid = ({ header, children }) => (
             <StyledGridContent>{ children }</StyledGridContent>
         </StyledGrid>
     </div>);
+
+Grid.propTypes = {
+    header: PropTypes.string,
+};
 
 export default Grid;
